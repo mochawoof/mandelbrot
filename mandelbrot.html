@@ -1,0 +1,27 @@
+<head>
+	<title>Mandelbrot Set</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<style>
+		canvas {	
+			background:#ddd;
+		}
+	</style>
+</head>
+<body>
+	<canvas width="150" height="100"></canvas>
+	<p>
+		Accuracy: <input id="maxIterationsRange" type="range" min="10" max="1000" value="80">
+	</p>
+	<p>
+		Canvas Size (<span id="canvasSizeLabel">150x100</span>): <input id="canvasSizeRange" type="range" min="1" max="15" value="3">
+	</p>
+	<p>
+		Theme: <select id="selectedColorSelect"></select>
+	</p>
+	<p>
+		<button onclick="plot()">Replot</button>
+		<button onclick="reset()">Reset Position</button>
+	</p>
+</body>
+<script src="complex.min.js"></script>
+<script src="script.js"></script>
